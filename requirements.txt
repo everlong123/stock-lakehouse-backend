@@ -9,32 +9,32 @@ pymysql==1.1.1
 cryptography==43.0.1
 passlib[bcrypt]==1.7.4
 bcrypt==4.1.3
-pandas==2.2.3
-numpy==1.26.4
-pyarrow==17.0.0
-scikit-learn==1.5.2
-statsmodels==0.14.3
-torch==2.4.1
-yfinance==0.2.43
-minio==7.2.9
-plotly==5.24.1
-httpx==0.27.2
-openai==1.51.0
-python-multipart==0.0.12
-joblib==1.4.2
-pyspark==3.5.3
-pytest==8.3.3
-ruff==0.6.9
-black==24.8.0
-email-validator==2.2.0
+pandas>=2.0.0
+numpy>=1.26.0
+pyarrow>=18.0.0
+scikit-learn>=1.5.0
+statsmodels>=0.14.0
+# torch>=2.4.0  # Uncomment if needed for ML, increases build time
+yfinance>=0.2.40
+minio>=7.2.0
+plotly>=5.24.0
+httpx>=0.27.0
+openai>=1.51.0
+python-multipart>=0.0.12
+joblib>=1.4.0
+# pyspark>=3.5.0  # Uncomment if needed, increases build time significantly
+pytest>=8.0.0
+ruff>=0.6.0
+black>=24.0.0
+email-validator>=2.2.0
 # ── Dagster Orchestration (requires Python 3.12+) ─────────────────────────────
 # dagster==1.9.2
 # dagster-graphql==1.9.2
 # dagster-postgres==1.9.2
 # ── Apache Iceberg (Modern Table Format) ─────────────────────────────────────
-pyiceberg==0.7.0
+pyiceberg>=0.7.0
 # ── Optional: for REST catalog ─────────────────────────────────────────────────
 # iceberg-rest-catalog  # Use docker service instead
-# ── Apache Kafka (Real-time Streaming) ───────────────────────────────────────
-kafka-python==2.0.2
-confluent-kafka==2.6.1
+# ── Apache Kafka (Real-time Streaming) ─────────────────────────────────────
+kafka-python>=2.0.2
+# confluent-kafka>=2.6.0  # Uncomment if using Confluent Cloud
