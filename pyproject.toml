@@ -1,0 +1,22 @@
+[project]
+name = "stock-lakehouse-platform"
+version = "1.0.0"
+description = "Stock Data Lakehouse analytics, forecasting, backtesting and AI agent platform"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
